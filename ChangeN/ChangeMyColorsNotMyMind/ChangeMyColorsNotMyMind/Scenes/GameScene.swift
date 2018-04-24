@@ -71,11 +71,13 @@ class GameScene: SKScene {
         
         colorSwitch = SKSpriteNode(imageNamed: "ownwheel1")
         colorSwitch.size = CGSize(width: frame.size.width/3, height: frame.size.width/3)
+        // In order to avoid letting the colorSwitch stick to the bottom
         colorSwitch.position = CGPoint(x: frame.midX, y: frame.minY + colorSwitch.size.height)
         colorSwitch.zPosition = ZPositions.colorSwitch
         colorSwitch.physicsBody = SKPhysicsBody(circleOfRadius:colorSwitch.size.width/2)
         colorSwitch.physicsBody?.categoryBitMask = PhysicsCategories.switchCategory
         colorSwitch.physicsBody?.isDynamic = false
+        // Pass the node
         addChild(colorSwitch)
         
         scoreLabel.fontName = "AvenirNext-Bold"
@@ -101,6 +103,7 @@ class GameScene: SKScene {
         // ball.size = CGSize(width: 30.0, height: 30.0)
         ball.colorBlendFactor = 1.0
         ball.name = "Ball"
+        // Up
         ball.position = CGPoint(x: frame.midX, y: frame.maxY)
         ball.zPosition = ZPositions.ball
         ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width/2)
