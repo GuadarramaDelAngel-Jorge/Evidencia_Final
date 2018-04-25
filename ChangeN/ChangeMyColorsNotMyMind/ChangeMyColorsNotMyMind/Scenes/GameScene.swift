@@ -148,9 +148,10 @@ class GameScene: SKScene {
     
     func gameOver(){
         
+        //Save small pieces of data 
         UserDefaults.standard.set(score, forKey: "RecentScore")
         if score > UserDefaults.standard.integer(forKey: "Highscore"){
-            
+            // Defining a Highscore
             UserDefaults.standard.set(score, forKey: "Highscore")
         }
         
