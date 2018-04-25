@@ -21,6 +21,7 @@ class MenuScene: SKScene {
         
         let logo = SKSpriteNode(imageNamed: "ownwheel1")
         logo.size = CGSize(width: frame.width/2, height: frame.width/2)
+        // Slightly above the y axis
         logo.position = CGPoint(x: frame.midX, y: frame.midY + frame.size.height/4)
         addChild(logo)
         
