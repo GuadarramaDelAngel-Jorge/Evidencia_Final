@@ -27,8 +27,10 @@ enum PhysicsCategories {
 }
 
 enum ZPositions {
-    
+    // The bigger the value, the closer the element will be towards us
+    // The label is at the very back of the layout
     static let label: CGFloat = 0
+    // Above our label
     static let ball: CGFloat = 1
     static let colorSwitch: CGFloat = 2
 }
