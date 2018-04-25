@@ -25,8 +25,7 @@ class GameViewController: UIViewController {
                 
                 // Present the scene
                 view.presentScene(scene)
-            
-            
+           // Our view runs in no particular order but in an organized way
             view.ignoresSiblingOrder = true
             
             view.showsFPS = true
